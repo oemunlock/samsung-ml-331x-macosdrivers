@@ -2,7 +2,7 @@
 
 from selenium import webdriver
 
-def give_me_a_shell(driver):
+def give_me_a_python_repl_shell(driver):
 	try:
 		import code
 		import readline
@@ -25,4 +25,4 @@ chrome_options.add_argument('--proxy-server=%s' % PROXY)
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
 print "[.] Any final debugging?"
-give_me_a_shell(driver)
+give_me_a_python_repl_shell(driver)
