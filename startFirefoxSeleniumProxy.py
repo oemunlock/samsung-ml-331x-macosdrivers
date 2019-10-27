@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import selenium.webdriver.support.ui as ui
 
-def give_me_a_shell(driver):
+def give_me_a_python_repl_shell(driver):
 	try:
 		import code
 		import readline
@@ -38,4 +38,4 @@ driver = webdriver.Firefox(capabilities=caps)
 
 
 print "[.] Any final debugging?"
-giveshell(driver)
+give_me_a_python_repl_shell(driver)
