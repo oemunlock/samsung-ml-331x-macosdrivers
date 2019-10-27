@@ -2,4 +2,4 @@ Often times during a pentest, you'd like to use your favorite browser for resear
 
 The script remains in a code repl shell in case you want to use other features like Selenium's screenshot capabilties or some other automation (such as login or recreating a usecase).
 
-Requires selenium and python
+Requires selenium and python. You may need to remove the python lines for readline if you are using this on Windows.
