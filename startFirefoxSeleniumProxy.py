@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import selenium.webdriver.support.ui as ui
 
-def give_me_a_python_repl_shell(driver):
+def interact(driver):
 	try:
 		import code
 		import readline
@@ -20,9 +20,9 @@ def give_me_a_python_repl_shell(driver):
 		shell = code.InteractiveConsole(vars)
 		shell.interact()
 	except:
-		print "[-] No shell for you!"
+		print "[-] Error with python repl!"
 	finally:
-		print "[+] Peace out"
+		print "[+] Done with python repl"
 		driver.quit()
 
 
@@ -38,4 +38,4 @@ driver = webdriver.Firefox(capabilities=caps)
 
 
 print "[.] Any final debugging?"
-give_me_a_python_repl_shell(driver)
+interact(driver)

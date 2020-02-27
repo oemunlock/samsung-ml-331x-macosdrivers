@@ -2,7 +2,7 @@
 
 from selenium import webdriver
 
-def give_me_a_python_repl_shell(driver):
+def interact(driver):
 	try:
 		import code
 		import readline
@@ -14,9 +14,9 @@ def give_me_a_python_repl_shell(driver):
 		shell = code.InteractiveConsole(vars)
 		shell.interact()
 	except:
-		print "[-] No shell for you!"
+		print "[-] Error with python repl!"
 	finally:
-		print "[+] Peace out"
+		print "[+] Done with python repl"
 		driver.quit()
 
 PROXY = "127.0.0.1:8080" # IP:PORT or HOST:PORT
@@ -25,4 +25,4 @@ chrome_options.add_argument('--proxy-server=%s' % PROXY)
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
 print "[.] Any final debugging?"
-give_me_a_python_repl_shell(driver)
+interact(driver)
