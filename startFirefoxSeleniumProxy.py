@@ -20,9 +20,9 @@ def interact(driver):
 		shell = code.InteractiveConsole(vars)
 		shell.interact()
 	except:
-		print "[-] Error with python repl!"
+		print("[-] Error with python repl!")
 	finally:
-		print "[+] Done with python repl"
+		print("[+] Done with python repl")
 		driver.quit()
 
 
@@ -37,5 +37,5 @@ caps['proxy'] = {
 driver = webdriver.Firefox(capabilities=caps)
 
 
-print "[.] Any final debugging?"
+print("[.] Any final debugging?")
 interact(driver)

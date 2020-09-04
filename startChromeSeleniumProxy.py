@@ -14,9 +14,9 @@ def interact(driver):
 		shell = code.InteractiveConsole(vars)
 		shell.interact()
 	except:
-		print "[-] Error with python repl!"
+		print("[-] Error with python repl!")
 	finally:
-		print "[+] Done with python repl"
+		print("[+] Done with python repl")
 		driver.quit()
 
 PROXY = "127.0.0.1:8080" # IP:PORT or HOST:PORT
@@ -24,5 +24,5 @@ chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--proxy-server=%s' % PROXY)
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
-print "[.] Any final debugging?"
+print("[.] Any final debugging?")
 interact(driver)
