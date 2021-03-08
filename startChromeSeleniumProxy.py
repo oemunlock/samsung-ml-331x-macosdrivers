@@ -22,7 +22,7 @@ def interact(driver):
 PROXY = "127.0.0.1:8080" # IP:PORT or HOST:PORT
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--proxy-server=%s' % PROXY)
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 print("[.] Any final debugging?")
 interact(driver)
