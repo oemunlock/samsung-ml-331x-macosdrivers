@@ -11,12 +11,13 @@ import selenium.webdriver.support.ui as ui
 def interact(driver):
 	try:
 		import code
-		import readline
-		import rlcompleter
 		vars = globals()
 		vars.update(locals())
-		readline.set_completer(rlcompleter.Completer(vars).complete)
-		readline.parse_and_bind("tab: complete")
+		if os.name != 'nt':
+			import readline
+			import rlcompleter
+			readline.set_completer(rlcompleter.Completer(vars).complete)
+			readline.parse_and_bind("tab: complete")
 		shell = code.InteractiveConsole(vars)
 		shell.interact()
 	except:
