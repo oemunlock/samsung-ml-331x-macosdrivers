@@ -2,6 +2,7 @@
 
 from selenium import webdriver
 import os
+import chromedriver_autoinstaller
 
 def interact(driver):
 	try:
@@ -15,11 +16,17 @@ def interact(driver):
 			readline.parse_and_bind("tab: complete")
 		shell = code.InteractiveConsole(vars)
 		shell.interact()
-	except:
+	except Exception as e:
 		print("[-] Error with python repl!")
+		print(e)
 	finally:
 		print("[+] Done with python repl")
 		driver.quit()
+
+try:
+	chromedriver_autoinstaller.install()
+except Exception as e:
+	print("[-] Error updating chromedriver. Consider manual installation.")
 
 PROXY = "127.0.0.1:8080" # IP:PORT or HOST:PORT
 chrome_options = webdriver.ChromeOptions()
