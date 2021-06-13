@@ -12,7 +12,7 @@ python3 -m pip install chromedriver-autoinstaller
 python3 -m pip install geckodriver-autoinstaller
 
 ```
-On Windows, the geckodriver-autoinstaller is not well maintained. As of June 2021, I am currently using this variation in windows 
+geckodriver-autoinstaller is not well maintained. As of June 2021, I am currently using this variation in windows 
 https://github.com/VBobCat/python-geckodriver-autoinstaller
 
 
