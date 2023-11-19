@@ -11,3 +11,5 @@ and the PPDs files need to be put in /Library/Printers/PPDs/Contents/Resources
 In this repo, these directories are in the respective directories intended to be on your mac.
 
 3) After placing the files in those directories, Click Add Printer. I was able to add my printer using Bonjour and by IP using IPP. The driver was automatically selected to be the Samsung ML-331x Series. 
+
+Use at your own risk!
