@@ -1,6 +1,6 @@
 # samsung-ml-331x-macosdrivers
 These drivers are confirmed to work on MacOS Sonoma 14.1.1 (23B81) for the ML-331x using a Macbook Pro 16" 2019 (Intel based machine). I wasn't able to find these on the (now) HP website.
-At the time of this writing (Nov 2023), the support website only listed this: https://support.hp.com/us-en/drivers/samsung-ml-3310-laser-printer-series/17156823
+At the time of this writing (Nov 2023), the support website only listed this: https://support.hp.com/us-en/drivers/samsung-ml-3310-laser-printer-series/17156823 which no longer distributes the driver files.
 
 To install:
 1) Ensure the Printer & Scanners window is closed. 
