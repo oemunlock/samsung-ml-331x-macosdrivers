@@ -9,6 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import selenium.webdriver.support.ui as ui
 import getpass, os, time, sys
 import datetime, getopt
+import geckodriver_autoinstaller
 
 
 def debug_repl(driver):
@@ -100,6 +101,7 @@ def main():
 		driver = webdriver.Chrome(options=chrome_options)
 	else:
 		print("[+] Launching Firefox")
+		geckodriver_autoinstaller.install()
 		driver = webdriver.Firefox(capabilities=caps)
 
 
@@ -124,9 +126,9 @@ def main():
 
 	try:
 		print("[+] Waiting for email entry field: %s" % driver.title)	
-		wait_for_id_then_click(driver, "email::content")
+		wait_for_id_then_click(driver, "sView1:r1:0:email::content")
 		print("[+] Entering User Data:")
-		driver.find_element_by_id("email::content").send_keys(email)
+		driver.find_element_by_id("sView1:r1:0:email::content").send_keys(email)
 		driver.find_element_by_id("password::content").send_keys(random_password)
 		driver.find_element_by_id("retypePassword::content").send_keys(random_password)
 		driver.find_element_by_id("firstName::content").send_keys("Darren")
